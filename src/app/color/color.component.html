@@ -1,0 +1,35 @@
+<div class="inputDiv" [style.background-color]="color">
+    {{color}}
+</div>
+
+<input #inputColor (change)="changeColor(inputColor)" type="text" class="form-control">
+
+<div class="inputDiv" [style.background-color]="colors">
+    {{colors}}
+</div>
+
+<input [(ngModel)]="colors" type="text" class="form-control">
+
+la couleur est {{colors}}
+
+<div>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>nom</th>
+            <th>prenom</th>
+            <th>date</th>
+        </tr>
+
+        <tr *ngFor="let item of data, let i = index">
+            <td>{{i+1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.prenom}}</td>
+            <td>{{item.date}}</td>
+        </tr>
+    </table>
+</div>
+
+<div *ngIf="colors == 'red'" class="inputDiv" [style.background-color]="colors">
+
+</div>
