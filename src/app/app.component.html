@@ -1,9 +1,17 @@
-<app-header></app-header>
+<ng-container>
+    <app-header></app-header>
 
-<app-right-sidebar></app-right-sidebar>
-<app-left-side-bar></app-left-side-bar>
+    <app-right-sidebar></app-right-sidebar>
+    <app-left-side-bar></app-left-side-bar>
 
-<div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu-overlay"></div>
 
-
-<app-footer></app-footer>
+    <div class="main-container">
+        <div class="pd-ltr-20 xs-pd-20-10">
+            <div class="min-height-200px">
+                <router-outlet></router-outlet>
+            </div>
+            <app-footer></app-footer>
+        </div>
+    </div>
+</ng-container>

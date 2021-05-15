@@ -1,0 +1,33 @@
+<div class="page-header">
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="title">
+                <h4>Blog Category</h4>
+            </div>
+            <nav aria-label="breadcrumb" role="navigation">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"> <a class="text-primary"
+                            [routerLink]="['/blog-category/all']">Blog Category</a></li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<form (submit)="onSubmit()" [formGroup]="dataForm">
+    <div class="form-group">
+        <label>Nom</label>
+        <input class="form-control {{ isSubmitted && form.name.errors ? 'is-invalid' : '' }}" type="text"
+            placeholder="Veullez entrer le nom ..." formControlName="name">
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        <textarea class="form-control {{ isSubmitted && form.description.errors ? 'is-invalid' : '' }}"
+            formControlName="description" placeholder="Veullez entrer une description ..."></textarea>
+    </div>
+    <div class="ml-auto">
+        <button type="submit" class="btn btn-primary"> Modifier</button>
+    </div>
+
+</form>
