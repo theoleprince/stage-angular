@@ -1,0 +1,38 @@
+
+<div class="page-header">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <div class="title">
+                <h4>Blog Categories Junie</h4>
+            </div>
+            <nav aria-label="breadcrumb" role="navigation">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Blog Categories Junie</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="pd-20 card-box mb-30">
+   <!--  <div class="clearfix">
+        <div class="pull-left">
+            <h4 class="text-blue h4">horizontal Basic Forms</h4>
+            <p class="mb-30">All bootstrap element classies</p>
+        </div>
+    </div> -->
+    <form (submit)="onSubmit()" [formGroup]="dataForm">
+        <div class="form-group">
+            <label>Nom</label>
+            <input class="form-control {{ form.name.errors ? 'is-invalid' : '' }}" type="text" 
+                placeholder="Veuillez entrer le nom" formControlName="name">
+        </div>
+        <div class="form-group">
+            <label>Description</label>
+            <textarea class="form-control" type="text" placeholder="Veuillez entrer la description" 
+                formControlName="description"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Ajouter</button>
+    </form>
+</div>

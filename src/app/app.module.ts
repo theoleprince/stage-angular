@@ -17,6 +17,10 @@ import { DetailComponent } from './blog-categories/detail/detail.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { AddJunieComponent } from './blog-categories-junie/add-junie/add-junie.component';
+import { UpdateJunieComponent } from './blog-categories-junie/update-junie/update-junie.component';
+import { AllJunieComponent } from './blog-categories-junie/all-junie/all-junie.component';
+import { DetailJunieComponent } from './blog-categories-junie/detail-junie/detail-junie.component';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -32,7 +36,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     AddComponent,
     AllComponent,
     UpdateComponent,
-    DetailComponent
+    DetailComponent,
+    AddJunieComponent,
+    UpdateJunieComponent,
+    AllJunieComponent,
+    DetailJunieComponent
   ],
   imports: [
     BrowserModule,

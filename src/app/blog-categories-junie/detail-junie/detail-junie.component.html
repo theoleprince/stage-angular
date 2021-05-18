@@ -1,0 +1,42 @@
+<div class="page-header">
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="title">
+                <h4>Blog Categories Junie</h4>
+            </div>
+            <nav aria-label="breadcrumb" role="navigation">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Blog Categories Junie</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="card-box mb-30">
+    <!-- <div class="pd-20">
+        <h4 class="text-blue h4">Data Table Simple</h4>
+        <p class="mb-0">you can find more options <a class="text-primary" href="https://datatables.net/"
+                target="_blank">Click Here</a></p>
+    </div> -->
+    <div class="pb-20">
+        <table class="data-table table stripe hover nowrap">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th class="table-plus datatable-nosort">Nom</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of blogCategorie?.blogCategorie,let i=index" id="{{ item.id }}">
+                    <td class="table-plus">{{i}}</td>
+                    <td class="table-plus">{{item.name}}</td>
+                    <td class="table-plus"> {{item.description}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
