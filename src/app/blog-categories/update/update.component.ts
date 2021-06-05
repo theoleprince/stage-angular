@@ -13,6 +13,7 @@ export class UpdateComponent implements OnInit {
   dataForm!: FormGroup;
   blogCategorie: any;
   idItem: any = null;
+  isSubmitted = false;
 
   constructor(
     private dataService: BlogCategorieService,
